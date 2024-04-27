@@ -8,19 +8,6 @@ type Node struct {
 	Perv *Node
 }
 
-func (n *Node) PrintNode() {
-	prev := "-"
-	next := "-"
-	if n.Perv != nil {
-		prev = fmt.Sprintf("%d", n.Perv.Data)
-	}
-	if n.Next != nil {
-		next = fmt.Sprintf("%d", n.Next.Data)
-	}
-
-	fmt.Printf("data: %d, prev: %s, next: %s \n", n.Data, prev, next)
-}
-
 type LinkedList struct {
 	Head      *Node
 	Tail      *Node
